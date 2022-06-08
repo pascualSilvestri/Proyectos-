@@ -1,6 +1,8 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 100vw;
 }
 
 h1{
@@ -8,11 +10,33 @@ h1{
     font-size: 30px;
     background-color: #444444;
     transition: all 4s;
-    transform: skewY(10deg);
+    text-align: center;
 }
 
 h1:hover{
+    transition: all 4s;
     font-size: 80px;
     background-color: #932;
-    transform: skewY(-20deg);
+}
+
+.container{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.img{
+    min-width: 50px;
+    max-width: 250px;
+    margin:2%;
+
+}
+
+.img:active{
+    transition: all 2s;
+    max-width: 60%;
+    position:absolute;
+    left: 20%;
+    top:10%;
 }
